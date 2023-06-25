@@ -102,7 +102,7 @@ class Main extends PluginBase implements Listener{
 
 		$break = $event->getBlock();
 
-		if($break->getId() === 14 || $break->getId() === 15 || $break->getId() === 16 || $break->getId() === 21 || $break->getId() === 56 || $break->getId() === 56 || $break->getId() === 73 || $break->getId() === 129 ||$break->getId() === 153){
+		if($break->getTypeId == BlockTypeIds::DIAMOND_ORE || $break->getTypeId == BlockTypeIds::GOLD_ORE || $break->getTypeId == BlockTypeIds::REDSTONE_ORE || $break->getTypeId == BlockTypeIds::IRON_ORE || $break->getTypeId == BlockTypeIds::COAL_ORE){
 
 			$data = new Config($this->getDataFolder() . "topten_data/topmine.yml", Config::YAML);
 
